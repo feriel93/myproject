@@ -6,11 +6,23 @@ import { Link, Route, Switch } from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import AddRecipe from './components/AddRecipe';
 import Categorie from './components/Categorie';
-
+import Contact from './components/Contact';
 
 function App() {
-  const data =[  {
-    "id":1,
+  const data =[ 
+    {
+      "id":1,
+      "label":"Salade niçoise",
+      "time":"1 h 30 min",
+      "desc":"Une recette de salade niçoise facile et rapide à réaliser ! ",
+      "ingredients":"4 oeufs ,quelques feuilles de mesclun et / ou de basilic frais ,1 boîte 200 g de thon égoutté,15-20 olives noires",
+      "recipe":"Commencez par préparer les oeufs durs, en les plongeant délicatement dans une casserole d'eau frémissante, et en les faisant cuire 10 min à partir de la reprise de l'ébullition. Pendant ce temps, coupez vos tomates en quartiers, et votre poivron en rondelles ou en lamelles, et vos radis en tranches, puis égouttez la boîte de thon ainsi que les les filets d'anchois. Quand les oeufs sont cuits, plongez les dans l'eau froide puis écalez-les et tranchez-les en 6 ou 8 quartiers.",
+      "categorie":"entree",
+      "rating":"",
+      "image":"https://img.cuisineaz.com/660x660/2013/12/20/i34581-salade-nicoise-rapide.jpg",
+    },
+    {
+    "id":2,
     "label":"Crèpe",
     "time":"30 min",
     "desc":"Une recette de crêpes facile et rapide à réaliser ! Ces crêpes seront déclinables en version salée ou sucrée.",
@@ -21,9 +33,9 @@ function App() {
     "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbXP11Ww0_mKUFxGtpJt7jLCYx52R6PZROA&usqp=CAU",
   },
   {
-    "id":2,
+    "id":3,
     "label":"Escalope à la crème",
-    "time":"60 min",
+    "time":"1 h",
     "desc":"Une recette facile et rapide à réaliser ! Pour les amoureux de la crème",
     "ingredients":"escalope,crème fraiche,fromage",
     "recipe":"melanger ......",
@@ -47,7 +59,7 @@ const [recipes, setRecipes] = useState(data);
               <Link to="/AddRecipe">Add recipe</Link>
             </li>
             <li> 
-              <Link to="/Contact">Categorie</Link>
+              <Link to="/Contact">Contact</Link>
             </li>
           </ul>
          </div> 
@@ -56,7 +68,7 @@ const [recipes, setRecipes] = useState(data);
       <Route exact path="/"  ><Home data={data} recipes={recipes} setRecipes={setRecipes} /></Route>
       <Route  path="/Description/:id" ><Description data={data} /></Route>
       <Route  path="/AddRecipe" ><AddRecipe recipes={recipes} /></Route>
-      <Route  path="/Contact" ><Categorie recipes={recipes} /></Route>
+      <Route  path="/Contact" ><Contact/></Route>
       </Switch>
     </div>
     </Router>

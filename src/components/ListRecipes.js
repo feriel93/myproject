@@ -1,19 +1,25 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import Recipe from './Recipe'
 
 const ListRecipes = (props) => {
 
     return (
-    <div className="row">
+      <>
+      
+     
          {props.recipes.map((recipe,index) =>
-            <div className="col-sm-6">
+            <div className="col">
             <Recipe 
             recipes={recipe}
               />
             </div>  
           )}
-       </div> 
-
+      
+      
+    
+       
+      </>
 );
 }
 

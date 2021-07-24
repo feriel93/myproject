@@ -16,12 +16,10 @@ import Form from 'react-bootstrap/Form';
 
        return(
         <div className="Card">
-            
                     <img src={props.recipes.image} className="image"/>
                         <div>
                       <Link to ={`/Description/${props.recipes.id}`} className="recipeLabel" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                            <h1>{props.recipes.label}</h1>
-                            
                       </Link>
                       <p className="DescRecipe">                    
                            {props.recipes.desc}
@@ -30,10 +28,7 @@ import Form from 'react-bootstrap/Form';
                       
                     {props.recipes.time}
                     </div> 
-                      <ReactStars size={30} onChange ={ChangeRate}/>
-                      
-                      
-                     
+                      <ReactStars size={30} onChange ={ChangeRate}/>   
                 </div>  
        );};
 

@@ -6,30 +6,35 @@ import Categorie from "./Categorie";
 const Home = (props) => {
    
     return  (
+      <>
       <div className="App">
-      <div className='row'>
+        <div className="container">
+      <Row>
       <div>
           <Col>
       <Categorie setRecipes={props.setRecipes} data={props.data} />
             </Col>
       </div>
-
+      </Row>
+      <Row>
       <div>
           <Col>
       <Search setRecipes={props.setRecipes} data={props.data} />
             </Col>
       </div>
-      
+      </Row>
+      <Row>
       <div className="recipes">
-          <Col>
+         
       <ListRecipes recipes={props.recipes} />
-      </Col>
+          
       </div>
-     
-      </div>
-      <br></br>
+      </Row>
       
-    </div>
+      <br></br>
+      </div>
+      </div>
+    </>
         
   );
 
