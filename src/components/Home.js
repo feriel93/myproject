@@ -9,27 +9,27 @@ const Home = (props) => {
       <>
       <div className="App">
         <div className="container">
-      <Row>
+      
       <div>
-          <Col>
+          
       <Categorie setRecipes={props.setRecipes} data={props.data} />
-            </Col>
+         
       </div>
-      </Row>
-      <Row>
+    
+      
       <div>
-          <Col>
+     
       <Search setRecipes={props.setRecipes} data={props.data} />
-            </Col>
+            
       </div>
-      </Row>
-      <Row>
+    
+      
       <div className="recipes">
          
       <ListRecipes recipes={props.recipes} />
           
       </div>
-      </Row>
+    
       
       <br></br>
       </div>

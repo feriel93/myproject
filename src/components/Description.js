@@ -14,7 +14,7 @@ return (
         <>
         <Container>
       <Row>
-        <Col md={{ span: 10, offset: 3 }}>
+        <Col md={{ span:7, offset: 3 }}>
         <Jumbotron>
         <div><h1>{recipe.label}</h1></div>
         <img src={recipe.image} className="image"/>

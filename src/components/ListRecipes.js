@@ -6,10 +6,8 @@ const ListRecipes = (props) => {
 
     return (
       <>
-      
-     
          {props.recipes.map((recipe,index) =>
-            <div className="col">
+            <div>
             <Recipe 
             recipes={recipe}
               />

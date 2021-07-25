@@ -67,7 +67,7 @@ const [recipes, setRecipes] = useState(data);
       <Switch>
       <Route exact path="/"  ><Home data={data} recipes={recipes} setRecipes={setRecipes} /></Route>
       <Route  path="/Description/:id" ><Description data={data} /></Route>
-      <Route  path="/AddRecipe" ><AddRecipe recipes={recipes} /></Route>
+      <Route  path="/AddRecipe" ><AddRecipe recipes={recipes} setRecipes={setRecipes} /></Route>
       <Route  path="/Contact" ><Contact/></Route>
       </Switch>
     </div>
